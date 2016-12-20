@@ -3,12 +3,11 @@
 # Define accompanying passwords/secrets in group_vars/staging/vault.yml
 
 wordpress_sites:
-  grafnyc.org:
+  thenewinquiry.com:
     site_hosts:
-      - canonical: grafnyc-staging.positiondevapp.com
+      - canonical: tni-staging.positiondevapp.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:positiondev/grafnyc.git # replace with your Git repo URL
-    repo_subtree_path: site
+    repo: git@github.com:positiondev/tni-bedrock.git # replace with your Git repo URL
     branch: master
     multisite:
       enabled: false
