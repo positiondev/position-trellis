@@ -8,6 +8,7 @@ users:
       - "{{ web_group }}"
     keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      - "{{ lookup('file', '~/.ssh/aws-tni.pub') }}"
       # - https://github.com/username.keys
   - name: "{{ admin_user }}"
     groups:
@@ -15,6 +16,11 @@ users:
     keys:
       - "{{ lookup('file', '~/.ssh/aws-tni.pub') }}"
       # - https://github.com/username.keys
+  - name: misfist
+    groups:
+      - sudo
+    keys:
+      - https://github.com/misfist.keys
 
 admin_user: ubuntu
 web_user: web
